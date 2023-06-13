@@ -46,7 +46,7 @@ cd -
 cd grid-packages/ag-grid-react
 npm pack --pack-destination $CWD
 cd -
-cd grid-packages/ag-grid-angular
+cd grid-packages/ag-grid-angular/dist/ag-grid-angular
 npm pack --pack-destination $CWD
 
 cd $CWD
