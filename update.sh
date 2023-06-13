@@ -76,4 +76,4 @@ cd packages/webpack-ts/node_modules
 rm -rf @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
 cd -
 
-npx lerna bootstrap
+npx lerna bootstrap --no-ci
