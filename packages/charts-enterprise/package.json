@@ -1,0 +1,16 @@
+{
+  "name": "charts-enterprise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ag-charts-community": "/Users/seanlandsman/dev/ag-grid/latest/charts-community-modules/ag-charts-community/ag-charts-community-8.0.0.tgz",
+    "ag-charts-enterprise": "/Users/seanlandsman/dev/ag-grid/latest/charts-enterprise-modules/ag-charts-enterprise/ag-charts-enterprise-8.0.0.tgz"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

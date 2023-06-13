@@ -43,6 +43,12 @@ cd /Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-angular
 npm pack
 cd -
 
+cd packages/charts-community/node_modules
+rm -rf ag-charts-community ag-charts-enterprise
+cd -
+cd packages/charts-enterprise/node_modules
+rm -rf ag-charts-community ag-charts-enterprise
+cd -
 cd modules/angular/node_modules
 rm -rf @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
 cd -
