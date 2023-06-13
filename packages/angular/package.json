@@ -21,9 +21,9 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0",
-    "ag-grid-community": "30.0.0",
-    "ag-grid-enterprise": "30.0.0",
-    "ag-grid-angular": "30.0.0"
+    "ag-grid-community": "/Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-community/ag-grid-community-30.0.0.tgz",
+    "ag-grid-enterprise": "/Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-enterprise/ag-grid-enterprise-30.0.0.tgz",
+    "ag-grid-angular": "/Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-angular/ag-grid-angular-30.0.0.tgz"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.5",
