@@ -1,47 +1,55 @@
-cd /Users/seanlandsman/dev/ag-grid/latest/charts-community-modules/ag-charts-community
-npm pack
+SOURCE_FOLDER=$1
+
+CWD=`pwd`;
+
+cd $SOURCE_FOLDER
+
+cd charts-community-modules/ag-charts-community
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/charts-enterprise-modules/ag-charts-enterprise
-npm pack
+cd charts-enterprise-modules/ag-charts-enterprise
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/client-side-row-model
-npm pack
+cd grid-community-modules/client-side-row-model
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/core
-npm pack
+cd grid-community-modules/core
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/angular/dist/ag-grid-angular
-npm pack
+cd grid-community-modules/angular/dist/ag-grid-angular
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/styles
-npm pack
+cd grid-community-modules/styles
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-enterprise-modules/status-bar
-npm pack
+cd grid-enterprise-modules/status-bar
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/react
-npm pack
+cd grid-community-modules/react
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/vue
-npm pack
+cd grid-community-modules/vue
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/vue3
-npm pack
+cd grid-community-modules/vue3
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-enterprise-modules/core
-npm pack
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-community
-npm pack
+cd grid-enterprise-modules/core
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-enterprise
-npm pack
+cd grid-packages/ag-grid-community
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-react
-npm pack
+cd grid-packages/ag-grid-enterprise
+npm pack --pack-destination $CWD
 cd -
-cd /Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-angular
-npm pack
+cd grid-packages/ag-grid-react
+npm pack --pack-destination $CWD
 cd -
+cd grid-packages/ag-grid-angular
+npm pack --pack-destination $CWD
+
+cd $CWD
 
 cd packages/charts-community/node_modules
 rm -rf ag-charts-community ag-charts-enterprise

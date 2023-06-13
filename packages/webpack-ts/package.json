@@ -23,7 +23,7 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
-    "ag-grid-community": "/Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-community/ag-grid-community-30.0.0.tgz",
-    "ag-grid-enterprise": "/Users/seanlandsman/dev/ag-grid/latest/grid-packages/ag-grid-enterprise/ag-grid-enterprise-30.0.0.tgz"
+    "ag-grid-community": "../../ag-grid-community-30.0.0.tgz",
+    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.0.tgz"
   }
 }

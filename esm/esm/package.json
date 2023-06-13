@@ -12,15 +12,15 @@
   "devDependencies": {
     "ag-grid-community": "30.0.0",
     "ag-grid-enterprise": "30.0.0",
-    "@ag-grid-community/client-side-row-model": "/Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/client-side-row-model/ag-grid-community-client-side-row-model-30.0.0.tgz",
-    "@ag-grid-community/core": "/Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/core/ag-grid-community-core-30.0.0.tgz",
-    "@ag-grid-community/styles": "/Users/seanlandsman/dev/ag-grid/latest/grid-community-modules/styles/ag-grid-community-styles-30.0.0.tgz",
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.0.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.0.tgz",
+    "@ag-grid-community/styles": "../../ag-grid-community-styles-30.0.0.tgz",
     "@ag-grid-community/csv-export": "30.0.0",
     "@ag-grid-community/infinite-row-model": "30.0.0",
     "@ag-grid-enterprise/charts": "30.0.0",
     "@ag-grid-enterprise/clipboard": "30.0.0",
     "@ag-grid-enterprise/column-tool-panel": "30.0.0",
-    "@ag-grid-enterprise/core": "/Users/seanlandsman/dev/ag-grid/latest/grid-enterprise-modules/core/ag-grid-enterprise-core-30.0.0.tgz",
+    "@ag-grid-enterprise/core": "../../ag-grid-enterprise-core-30.0.0.tgz",
     "@ag-grid-enterprise/excel-export": "30.0.0",
     "@ag-grid-enterprise/filter-tool-panel": "30.0.0",
     "@ag-grid-enterprise/master-detail": "30.0.0",
@@ -33,7 +33,7 @@
     "@ag-grid-enterprise/set-filter": "30.0.0",
     "@ag-grid-enterprise/side-bar": "30.0.0",
     "@ag-grid-enterprise/sparklines": "30.0.0",
-    "@ag-grid-enterprise/status-bar": "/Users/seanlandsman/dev/ag-grid/latest/grid-enterprise-modules/status-bar/ag-grid-enterprise-status-bar-30.0.0.tgz",
+    "@ag-grid-enterprise/status-bar": "../../ag-grid-enterprise-status-bar-30.0.0.tgz",
     "@ag-grid-enterprise/viewport-row-model": "30.0.0"
   }
 }
