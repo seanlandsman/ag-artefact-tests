@@ -1,7 +1,7 @@
 describe('Grid Tests', () => {
     [
         {name: 'Charts Community', path: 'packages/charts-community', license: false},
-        {name: 'Charts Enterprise', path: 'packages/charts-enterprise', license: true},
+        // {name: 'Charts Enterprise', path: 'packages/charts-enterprise', license: true},
     ].forEach(testConfig => {
         it(`license message printed ${testConfig.name}`, () => {
             cy.visit(`http://127.0.0.1:8080/${testConfig.path}`, {

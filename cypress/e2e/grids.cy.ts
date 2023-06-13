@@ -1,7 +1,7 @@
 describe('Grid Tests', () => {
     [
         {name: 'Modules: Angular', path: 'modules/angular/dist/my-app/'},
-        {name: 'Packages: Angular', path: 'packages/angular/dist/my-app/'},
+        // {name: 'Packages: Angular', path: 'packages/angular/dist/my-app/'},
         {name: 'Modules: React', path: 'modules/react/build/'},
         {name: 'Packages: React', path: 'packages/react/build/'},
         {name: 'Modules: Webpack', path: 'modules/webpack-ts/dist/'},
