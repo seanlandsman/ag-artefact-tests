@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript example</title>
+    <meta charSet="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style media="only screen">
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        html {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0;
+            overflow: auto;
+        }
+
+        body {
+            padding: 1rem;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="myChart" style="height: 100%;">
+</div>
+<script>var __basePath = './';</script>
+<script src="./node_modules/ag-charts-community/dist/ag-charts-community.js">
+</script>
+<script>
+    // Source: http://www.sheffieldweather.co.uk/Averages/MONTHLYAIRAVERAGE.htm
+    function getData() {
+        return [
+            {
+                date: "Nov 1",
+                amount: 900,
+            },
+            {
+                date: "Nov 2",
+                amount: 345,
+            },
+            {
+                date: "Nov 3",
+                amount: 393,
+            },
+            {
+                date: "Nov 4",
+                amount: -108,
+            },
+            {
+                date: "Nov 5",
+                amount: -154,
+            },
+            {
+                date: "Nov 6",
+                amount: 135,
+            },
+            {
+                date: "Nov 7",
+                amount: 178,
+            },
+            {
+                date: "Nov 8",
+                amount: 286,
+            },
+            {
+                date: "Nov 9",
+                amount: -119,
+            },
+            {
+                date: "Nov 10",
+                amount: -361,
+            },
+            {
+                date: "Nov 11",
+                amount: -203,
+            },
+        ]
+    }
+
+</script>
+<script>
+    /** @type {import('ag-charts-community').AgChartOptions} */
+    const options = {
+        container: document.getElementById('myChart'),
+        autoSize: true,
+        title: {
+            text: 'Average expenditure on coffee',
+        },
+        subtitle: {
+            text: 'per person per week in Krakozhia',
+        },
+        data: [
+            {
+                year: '2015',
+                spending: 35,
+            },
+            {
+                year: '2016',
+                spending: 40,
+            },
+            {
+                year: '2017',
+                spending: 43,
+            },
+            {
+                year: '2018',
+                spending: 44,
+            },
+        ],
+        series: [
+            {
+                xKey: 'year',
+                yKey: 'spending',
+            },
+        ],
+    };
+
+    agCharts.AgChart.create(options);
+</script>
+</body>
+</html>
