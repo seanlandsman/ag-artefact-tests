@@ -3,6 +3,8 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 
+import 'ag-grid-enterprise';
+
 const App = () => {
   const [rowData] = useState([
     {make: "Toyota", model: "Celica", price: 35000},
