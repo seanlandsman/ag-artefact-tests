@@ -1,0 +1,16 @@
+{
+  "packages": [
+    "modules/*",
+    "packages/*",
+    "esm/*"
+  ],
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": [
+        "--no-package-lock",
+        "--force"
+      ]
+    }
+  },
+  "version": "30.0.0"
+}
