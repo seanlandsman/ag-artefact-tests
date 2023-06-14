@@ -6,7 +6,7 @@
   "scripts": {
     "start-server": "http-server . & echo $! > pid",
     "test": "cypress run",
-    "stop-server": "kill -9 `cat pid`"
+    "stop-server": "kill -9 `cat pid` 2> /dev/null"
   },
   "keywords": [],
   "author": "",
