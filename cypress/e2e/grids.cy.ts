@@ -14,8 +14,8 @@ describe('Grid Tests', () => {
         {name: 'Packages: React Enterprise', path: 'packages/react-enterprise/build/', license: true},
         {name: 'Packages: Webpack Community', path: 'packages/webpack-ts-community/dist/', license: false},
         {name: 'Packages: Webpack Enterprise', path: 'packages/webpack-ts-enterprise/dist/', license: true},
-        {name: 'ESM Community Package', path: 'esm/esm/communityPackageEsm.html', license: false},
-        {name: 'ESM Enterprise Package', path: 'esm/esm/enterprisePackageEsm.html', license: true},
+        {name: 'Packages: ESM Community', path: 'packages/esm/communityPackageEsm.html', license: false},
+        {name: 'Packages: ESM Enterprise', path: 'packages/esm/enterprisePackageEsm.html', license: true},
     ].forEach(({name, path, license}) => {
         it(`license message ${license ? 'printed' : 'not shown'} ${name}`, () => {
             cy.visit(`http://127.0.0.1:8080/${path}`, {

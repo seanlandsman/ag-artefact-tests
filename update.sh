@@ -53,7 +53,7 @@ npm pack --pack-destination $CWD
 
 cd $CWD
 
-for directory in 'esm' 'modules' 'packages';
+for directory in 'modules' 'packages';
 do
   for subDirectory in ./$directory/*;
   do

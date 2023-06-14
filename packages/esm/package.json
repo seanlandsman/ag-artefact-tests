@@ -1,0 +1,17 @@
+{
+  "name": "esm-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ag-grid-community": "../../ag-grid-community-30.0.0.tgz",
+    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.0.tgz"
+  }
+}
+
