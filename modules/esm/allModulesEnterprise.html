@@ -1,19 +1,47 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="stylesheet" href="./node_modules/ag-grid-enterprise/styles/ag-grid.css">
-    <link rel="stylesheet" href="./node_modules/ag-grid-enterprise/styles/ag-theme-alpine.css">
+    <link rel="stylesheet" href="./node_modules/@ag-grid-community/styles/ag-grid.css">
+    <link rel="stylesheet" href="./node_modules/@ag-grid-community/styles/ag-theme-alpine.css">
     <script type="module">
         import {
             ClientSideRowModelModule,
+            ClipboardModule,
+            ColumnsToolPanelModule,
+            ExcelExportModule,
+            FiltersToolPanelModule,
             Grid,
+            GridChartsModule,
+            MasterDetailModule,
+            MenuModule,
             ModuleRegistry,
-            StatusBarModule
-        } from './node_modules/ag-grid-enterprise/dist/ag-grid-enterprise.auto.complete.esm.js';
+            MultiFilterModule,
+            RangeSelectionModule,
+            RichSelectModule,
+            RowGroupingModule,
+            SetFilterModule,
+            SideBarModule,
+            StatusBarModule,
+            ViewportRowModelModule,
+        } from './node_modules/@ag-grid-enterprise/all-modules/dist/ag-grid-enterprise.esm.js';
 
         ModuleRegistry.registerModules([
             ClientSideRowModelModule,
-            StatusBarModule
+            GridChartsModule,
+            ClipboardModule,
+            ColumnsToolPanelModule,
+            ExcelExportModule,
+            FiltersToolPanelModule,
+            MasterDetailModule,
+            MenuModule,
+            RangeSelectionModule,
+            RichSelectModule,
+            RowGroupingModule,
+            SetFilterModule,
+            MultiFilterModule,
+            SideBarModule,
+            StatusBarModule,
+            ViewportRowModelModule,
         ]);
 
         const columnDefs = [

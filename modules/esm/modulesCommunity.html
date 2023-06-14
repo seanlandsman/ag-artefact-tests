@@ -1,14 +1,16 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="stylesheet" href="./node_modules/ag-grid-community/styles/ag-grid.css">
-    <link rel="stylesheet" href="./node_modules/ag-grid-community/styles/ag-theme-alpine.css">
+    <link rel="stylesheet" href="./node_modules/@ag-grid-community/styles/ag-grid.css">
+    <link rel="stylesheet" href="./node_modules/@ag-grid-community/styles/ag-theme-alpine.css">
     <script type="module">
         import {
-            ClientSideRowModelModule,
             Grid,
             ModuleRegistry
-        } from './node_modules/ag-grid-community/dist/ag-grid-community.auto.complete.esm.js';
+        } from './node_modules/@ag-grid-community/core/dist/core.esm.js';
+        import {
+            ClientSideRowModelModule
+        } from './node_modules/@ag-grid-community/client-side-row-model/dist/client-side-row-model.esm.js';
 
         ModuleRegistry.registerModules([
             ClientSideRowModelModule
@@ -29,13 +31,6 @@
 
         // let the grid know which columns and what data to use
         const gridOptions = {
-            defaultColDef: {
-                wrapText: true,
-                autoHeight: true,
-                resizable: true,
-                sortable: true,
-                filter: true
-            },
             columnDefs: columnDefs,
             rowData: rowData
         };

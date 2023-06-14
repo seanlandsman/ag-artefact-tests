@@ -24,6 +24,9 @@ cd -
 cd grid-community-modules/styles
 npm pack --pack-destination $CWD
 cd -
+cd grid-community-modules/all-modules
+npm pack --pack-destination $CWD
+cd -
 cd grid-enterprise-modules/status-bar
 npm pack --pack-destination $CWD
 cd -
@@ -50,6 +53,10 @@ npm pack --pack-destination $CWD
 cd -
 cd grid-packages/ag-grid-angular/dist/ag-grid-angular
 npm pack --pack-destination $CWD
+cd -
+cd grid-enterprise-modules/all-modules
+npm pack --pack-destination $CWD
+
 
 cd $CWD
 
