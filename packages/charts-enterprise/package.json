@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.0.tgz"
+    "ag-charts-enterprise": "../../ag-charts-enterprise-8.0.0.tgz"
   },
   "keywords": [],
   "author": "",
