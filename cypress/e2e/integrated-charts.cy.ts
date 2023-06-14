@@ -1,7 +1,6 @@
-describe('Grid Tests', () => {
+describe('Integrated Charts Tests', () => {
     [
-        {name: 'Charts Community', path: 'packages/charts-community', license: false},
-        // {name: 'Charts Enterprise', path: 'packages/charts-enterprise', license: true},
+        {name: 'Integrated Charts', path: 'packages/integrated-charts', license: true},
     ].forEach(({name, path, license}) => {
         it(`license message printed ${name}`, () => {
             cy.visit(`http://127.0.0.1:8080/${path}`, {
@@ -22,18 +21,38 @@ describe('Grid Tests', () => {
             }
         });
 
+        it(`column headers match ${name}`, () => {
+            cy.visit(`http://127.0.0.1:8080/${path}`);
+
+            cy.get(".ag-header-cell-text")
+                .should('have.length', 7)
+                .then(elements => Cypress.$.makeArray(elements).map((el) => el.innerText))
+                .should('deep.equal', ['Athlete', 'Age', 'Sport', 'Year', 'Gold', 'Silver', 'Bronze'])
+        });
+
+        it(`cell values match ${name}`, () => {
+            cy.visit(`http://127.0.0.1:8080/${path}`);
+
+            cy.get(".ag-cell-value")
+                .should('have.length', 119)
+                .then(elements => Cypress.$.makeArray(elements).map((el) => el.innerText))
+                .then(elements => elements.slice(0,7))
+                .should('deep.equal', ['Laura Robson', '18', 'Tennis', '2012', '0', '1', '0'])
+        })
+
         it(`charts-wrapper-present ${name}`, () => {
             cy.visit(`http://127.0.0.1:8080/${path}`);
 
             cy.get('div#myChart').children("div")
-                .should('have.class', 'ag-chart-wrapper')
+                .should('have.class', 'ag-chart')
         });
 
         it(`canvas present and visible ${name}`, () => {
             cy.visit(`http://127.0.0.1:8080/${path}`);
 
-            cy.get('div#myChart').children("div")
+            cy.get('.ag-chart-wrapper').children("canvas")
                 .should('be.visible')
+
         });
     })
 })

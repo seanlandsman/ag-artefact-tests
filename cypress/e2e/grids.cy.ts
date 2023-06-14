@@ -20,6 +20,8 @@ describe('Grid Tests', () => {
         {name: 'Packages: Webpack Enterprise', path: 'packages/webpack-ts-enterprise/dist/', license: true},
         {name: 'Packages: ESM Community', path: 'packages/esm/communityPackageEsm.html', license: false},
         {name: 'Packages: ESM Enterprise', path: 'packages/esm/enterprisePackageEsm.html', license: true},
+        // {name: 'Packages: Next Community', path: 'packages/next-community/.next/server/pages', license: false},
+        // {name: 'Packages: Next Enterprise', path: 'packages/next-enterprise/.next/server/pages', license: true},
     ].forEach(({name, path, license}) => {
         it(`license message ${license ? 'printed' : 'not shown'} ${name}`, () => {
             cy.visit(`http://127.0.0.1:8080/${path}`, {
