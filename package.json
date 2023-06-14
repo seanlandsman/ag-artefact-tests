@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start-server": "http-server . & echo $! > pid",
+    "build": "lerna run build",
     "test": "cypress run",
+    "test:local": "cypress run --reporter list",
     "stop-server": "kill -9 `cat pid` 2> /dev/null"
   },
   "keywords": [],

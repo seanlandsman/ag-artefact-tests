@@ -1,29 +1,43 @@
 describe('Grid Tests', () => {
     [
-        {name: 'Modules: Angular', path: 'modules/angular/dist/my-app/'},
-        // {name: 'Packages: Angular', path: 'packages/angular/dist/my-app/'},
-        {name: 'Modules: React', path: 'modules/react/build/'},
-        {name: 'Packages: React', path: 'packages/react/build/'},
-        {name: 'Modules: Webpack', path: 'modules/webpack-ts/dist/'},
-        {name: 'Packages: Webpack', path: 'packages/webpack-ts/dist/'},
-    ].forEach(testConfig => {
-        it(`license message printed ${testConfig.name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${testConfig.path}`, {
+        {name: 'Modules: Angular Community', path: 'modules/angular-community/dist/my-app/', license: false},
+        {name: 'Modules: Angular Enterprise', path: 'modules/angular-enterprise/dist/my-app/', license: true},
+        {name: 'Modules: React Community', path: 'modules/react-community/build/', license: false},
+        {name: 'Modules: React Enterprise', path: 'modules/react-enterprise/build/', license: true},
+        // {name: 'Modules: Webpack Community', path: 'modules/webpack-ts-community/dist/', license: false},
+        // {name: 'Modules: Webpack Enterprise', path: 'modules/webpack-ts-enterprise/dist/', license: true},
+        // {name: 'Packages: Vanilla Community', path: 'packages/vanilla/community.html', license: false},
+        // {name: 'Packages: Vanilla Enterprise', path: 'packages/vanilla/enterprise.html', license: true},
+        // {name: 'Packages: Angular Community', path: 'packages/angular-community/dist/my-app/', license: false},
+        // {name: 'Packages: Angular Enterprise', path: 'packages/angular-enterprise/dist/my-app/', license: true},
+        // {name: 'Packages: React Community', path: 'packages/react-community/build/', license: false},
+        // {name: 'Packages: React Enterprise', path: 'packages/react-enterprise/build/', license: true},
+        // {name: 'Packages: Webpack Community', path: 'packages/webpack-ts-community/dist/', license: false},
+        // {name: 'Packages: Webpack Enterprise', path: 'packages/webpack-ts-enterprise/dist/', license: true},
+        // {name: 'ESM Community Package', path: 'esm/esm/communityPackageEsm.html', license: false},
+        // {name: 'ESM Enterprise Package', path: 'esm/esm/enterprisePackageEsm.html', license: true},
+    ].forEach(({name, path, license}) => {
+        it(`license message ${license ? 'printed' : 'not shown'} ${name}`, () => {
+            cy.visit(`http://127.0.0.1:8080/${path}`, {
                 onBeforeLoad(win: any) {
                     cy.spy(win.console, 'error').as('spyWinConsoleError');
                 },
             })
 
-            // check for a couple of lines of the license key
-            cy.get('@spyWinConsoleError').should('be.calledWith', '***************************************** AG Grid Enterprise License *******************************************');
-            cy.get('@spyWinConsoleError').should('be.calledWith', '****************************************** License Key Not Found ***********************************************');
+            if(license) {
+                // check for a couple of lines of the license key
+                cy.get('@spyWinConsoleError').should('be.calledWith', '***************************************** AG Grid Enterprise License *******************************************');
+                cy.get('@spyWinConsoleError').should('be.calledWith', '****************************************** License Key Not Found ***********************************************');
 
-            // the entire license key message is 8 lines - any more or less and there is an issue
-            cy.get('@spyWinConsoleError').should('have.callCount', 8)
+                // the entire license key message is 8 lines - any more or less and there is an issue
+                cy.get('@spyWinConsoleError').should('have.callCount', 8)
+            } else {
+                cy.get('@spyWinConsoleError').should('have.callCount', 0)
+            }
         });
 
-        it(`column headers match ${testConfig.name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${testConfig.path}`);
+        it(`column headers match ${name}`, () => {
+            cy.visit(`http://127.0.0.1:8080/${path}`);
 
             cy.get(".ag-header-cell-text")
                 .should('have.length', 3)
@@ -31,8 +45,8 @@ describe('Grid Tests', () => {
                 .should('deep.equal', ['Make', 'Model', 'Price'])
         });
 
-        it(`cell values match ${testConfig.name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${testConfig.path}`);
+        it(`cell values match ${name}`, () => {
+            cy.visit(`http://127.0.0.1:8080/${path}`);
 
             cy.get(".ag-cell-value")
                 .should('have.length', 9)
