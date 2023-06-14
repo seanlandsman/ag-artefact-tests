@@ -1,14 +1,7 @@
 import { Grid, GridOptions, ModuleRegistry } from "@ag-grid-community/core";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
-import { StatusBarModule } from "@ag-grid-enterprise/status-bar";
-
-// or, if using Enterprise features
-// import {Grid, GridOptions, ModuleRegistry} from "@ag-grid-enterprise/core";
-// import {RowGroupingModule} from '@ag-grid-enterprise/row-grouping';
-// import {ClientSideRowModelModule} from "@ag-grid-community/client-side-row-model";
 
 ModuleRegistry.register(ClientSideRowModelModule);
-ModuleRegistry.register(StatusBarModule);
 
 import './styles.scss';
 
@@ -18,15 +11,7 @@ class SimpleGrid {
     constructor() {
         this.gridOptions = {
             columnDefs: this.createColumnDefs(),
-            rowData: this.createRowData(),
-            statusBar: {
-                statusPanels: [
-                    {
-                        statusPanel: 'agTotalAndFilteredRowCountComponent',
-                        align: 'left',
-                    }
-                ]
-            },
+            rowData: this.createRowData()
         };
 
         let eGridDiv:HTMLElement = <HTMLElement>document.querySelector('#myGrid');

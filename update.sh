@@ -2,6 +2,8 @@ SOURCE_FOLDER=$1
 
 CWD=`pwd`;
 
+rm *.tgz
+
 cd $SOURCE_FOLDER
 
 cd charts-community-modules/ag-charts-community
@@ -51,29 +53,14 @@ npm pack --pack-destination $CWD
 
 cd $CWD
 
-cd packages/charts-community/node_modules
-rm -rf ag-charts-community ag-charts-enterprise
-cd -
-cd packages/charts-enterprise/node_modules
-rm -rf ag-charts-community ag-charts-enterprise
-cd -
-cd modules/angular/node_modules
-rm -rf @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
-cd -
-cd modules/react/node_modules
-rm -rf @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
-cd -
-cd modules/webpack-ts/node_modules
-rm -rf @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
-cd -
-cd packages/angular/node_modules
-rm -rf @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
-cd -
-cd packages/react/node_modules
-rm -rf @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
-cd -
-cd packages/webpack-ts/node_modules
-rm -rf @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
-cd -
+for directory in 'esm' 'modules' 'packages';
+do
+  for subDirectory in ./$directory/*;
+  do
+	  cd "$subDirectory/node_modules"
+	  rm -rf ag-charts-community ag-charts-enterprise @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
+	  cd -
+	done
+done
 
 npx lerna bootstrap --no-ci
