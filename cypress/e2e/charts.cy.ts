@@ -1,6 +1,6 @@
 describe('Grid Tests', () => {
     [
-        {name: 'Charts Community', path: 'packages/charts-community', license: false},
+        {name: 'Charts Community', path: 'charts/charts-community', license: false},
         // {name: 'Charts Enterprise', path: 'packages/charts-enterprise', license: true},
     ].forEach(({name, path, license}) => {
         it(`license message printed ${name}`, () => {

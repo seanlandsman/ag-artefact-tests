@@ -50,6 +50,10 @@ npm pack --pack-destination $CWD
 cd -
 cd grid-packages/ag-grid-angular/dist/ag-grid-angular
 npm pack --pack-destination $CWD
+cd -
+cd grid-packages/ag-grid-vue
+npm pack --pack-destination $CWD
+cd -
 
 cd $CWD
 

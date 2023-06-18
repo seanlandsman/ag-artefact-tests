@@ -1,5 +1,5 @@
 {
-  "name": "webpack-ts-packages-community",
+  "name": "webpack-ts-favour-main-enterprise",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,6 +25,7 @@
     "rimraf": "5.0.1"
   },
   "dependencies": {
-    "ag-grid-community": "../../ag-grid-community-30.0.1.tgz"
+    "ag-grid-community": "../../ag-grid-community-30.0.1.tgz",
+    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.1.tgz"
   }
 }

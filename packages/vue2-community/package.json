@@ -9,8 +9,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "ag-grid-community": "~30.0.0",
-    "ag-grid-vue": "~30.0.0",
+    "ag-grid-community": "../../ag-grid-community-30.0.1.tgz",
+    "ag-grid-vue": "../../ag-grid-vue-30.0.1.tgz",
     "core-js": "^3.8.3",
     "sass": "^1.63.4",
     "sass-loader": "^13.3.2",

@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "parcel-bundler": "^1.6.1",
-    "@ag-grid-community/client-side-row-model": "~30.0.0",
-    "@ag-grid-community/core": "~30.0.0"
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.1.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.1.tgz"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",

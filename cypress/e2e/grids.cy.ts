@@ -25,7 +25,9 @@ describe('Grid Tests', () => {
         {name: 'Packages: Next Community', path: 'packages/next-community/.next/server/pages', license: false},
         {name: 'Packages: Next Enterprise', path: 'packages/next-enterprise/.next/server/pages', license: true},
         {name: 'Packages: Vue 2 Community', path: 'packages/vue2-community/dist', license: true},
-    ].forEach(({name, path, license}) => {
+        {name: 'Packages: Webpack Community Favour Main', path: 'packages/webpack-ts-favour-main-community/dist', license: false},
+        {name: 'Packages: Webpack Enterprise Favour Main', path: 'packages/webpack-ts-favour-main-enterprise/dist', license: true},
+        ].forEach(({name, path, license}) => {
         it(`license message ${license ? 'printed' : 'not shown'} ${name}`, () => {
             cy.visit(`http://127.0.0.1:8080/${path}`, {
                 onBeforeLoad(win: any) {

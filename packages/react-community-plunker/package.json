@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ag-grid-community": "~30.0.0",
-    "ag-grid-enterprise": "~30.0.0",
-    "ag-grid-react": "~30.0.0"
+    "ag-grid-community": "../../ag-grid-community-30.0.1.tgz",
+    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.1.tgz",
+    "ag-grid-react": "../../ag-grid-react-30.0.1.tgz"
   }
 }

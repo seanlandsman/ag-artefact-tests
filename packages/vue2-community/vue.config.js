@@ -5,7 +5,7 @@ module.exports = defineConfig({
     resolve: {
       alias: {
         'ag-grid-community/styles': path.resolve(__dirname, 'node_modules/ag-grid-community/styles'),
-        // 'ag-grid-community': path.resolve(__dirname, 'node_modules/ag-grid-community/dist/ag-grid-community.cjs.js'),
+        'ag-grid-community': path.resolve(__dirname, 'node_modules/ag-grid-community/dist/ag-grid-community.cjs.js'),
       }
     },
     performance: {
