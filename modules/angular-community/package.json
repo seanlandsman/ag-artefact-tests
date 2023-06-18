@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "rimraf .angular && ng serve",
-    "build": "rimraf .angular && ng build --base-href=/modules/angular-community/dist/my-app/",
+    "clean": "rimraf .angular dist",
+    "start": "npm run clean && ng serve",
+    "build": "npm run clean && ng build --base-href=/modules/angular-community/dist/my-app/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,10 +22,10 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0",
-    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.0.tgz",
-    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.0.tgz",
-    "@ag-grid-community/angular": "../../ag-grid-community-angular-30.0.0.tgz",
-    "@ag-grid-community/styles": "../../ag-grid-community-styles-30.0.0.tgz"
+    "@ag-grid-community/client-side-row-model": "~30.0.0",
+    "@ag-grid-community/core": "~30.0.0",
+    "@ag-grid-community/angular": "~30.0.0",
+    "@ag-grid-community/styles": "~30.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.5",

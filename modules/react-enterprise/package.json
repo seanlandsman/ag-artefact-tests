@@ -11,15 +11,17 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "@ag-grid-community/client-side-row-model": "30.0.1",
-    "@ag-grid-community/core": "30.0.1",
-    "@ag-grid-community/react": "/Users/seanlandsman/dev/ag-grid/30.0.1/grid-community-modules/react/ag-grid-community-react-30.0.1.tgz",
-    "@ag-grid-community/styles": "30.0.1",
-    "@ag-grid-enterprise/core": "30.0.1",
-    "@ag-grid-enterprise/status-bar": "30.0.1"
+    "@ag-grid-community/core": "~30.0.0",
+    "@ag-grid-community/react": "~30.0.0",
+    "@ag-grid-community/styles": "~30.0.0",
+    "@ag-grid-enterprise/core": "~30.0.0",
+    "@ag-grid-enterprise/status-bar": "~30.0.0",
+    "rimraf": "5.0.1"
   },
   "scripts": {
-    "start": "HOST= react-scripts start",
-    "build": "react-scripts build",
+    "clean": "rimraf build",
+    "start": "HOST= npm run clean && react-scripts start",
+    "build": "npm run clean && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

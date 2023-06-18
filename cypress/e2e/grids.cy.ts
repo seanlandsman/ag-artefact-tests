@@ -8,8 +8,6 @@ describe('Grid Tests', () => {
         {name: 'Modules: Webpack Enterprise', path: 'modules/webpack-ts-enterprise/dist/', license: true},
         {name: 'Modules: ESM Community', path: 'modules/esm/modulesCommunity.html', license: false},
         {name: 'Modules: ESM Enterprise', path: 'modules/esm/modulesEnterprise.html', license: true},
-        {name: 'Modules: ESM All Modules Community', path: 'modules/esm/allModulesCommunity.html', license: false},
-        {name: 'Modules: ESM All Modules Enterprise', path: 'modules/esm/allModulesEnterprise.html', license: true},
         {name: 'Packages: Vanilla Community', path: 'packages/vanilla/community.html', license: false},
         {name: 'Packages: Vanilla Enterprise', path: 'packages/vanilla/enterprise.html', license: true},
         {name: 'Packages: Angular Community', path: 'packages/angular-community/dist/my-app/', license: false},
@@ -18,10 +16,15 @@ describe('Grid Tests', () => {
         {name: 'Packages: React Enterprise', path: 'packages/react-enterprise/build/', license: true},
         {name: 'Packages: Webpack Community', path: 'packages/webpack-ts-community/dist/', license: false},
         {name: 'Packages: Webpack Enterprise', path: 'packages/webpack-ts-enterprise/dist/', license: true},
-        {name: 'Packages: ESM Community', path: 'packages/esm/communityPackageEsm.html', license: false},
-        {name: 'Packages: ESM Enterprise', path: 'packages/esm/enterprisePackageEsm.html', license: true},
-        // {name: 'Packages: Next Community', path: 'packages/next-community/.next/server/pages', license: false},
-        // {name: 'Packages: Next Enterprise', path: 'packages/next-enterprise/.next/server/pages', license: true},
+        {name: 'Packages: Individual ESM Community', path: 'packages/esm/communityPackageIndividualEsm.html', license: false},
+        {name: 'Packages: Individual ESM Enterprise', path: 'packages/esm/enterprisePackageIndividualEsm.html', license: true},
+        {name: 'Packages: ESM Community', path: 'packages/esm/community.html', license: false},
+        {name: 'Packages: ESM Enterprise', path: 'packages/esm/enterprise.html', license: true},
+        {name: 'Packages: Plunker Community', path: 'packages/react-community-plunker/', license: false},
+        {name: 'Packages: Plunker Enterprise', path: 'packages/react-enterprise-plunker/', license: true},
+        {name: 'Packages: Next Community', path: 'packages/next-community/.next/server/pages', license: false},
+        {name: 'Packages: Next Enterprise', path: 'packages/next-enterprise/.next/server/pages', license: true},
+        {name: 'Packages: Vue 2 Community', path: 'packages/vue2-community/dist', license: true},
     ].forEach(({name, path, license}) => {
         it(`license message ${license ? 'printed' : 'not shown'} ${name}`, () => {
             cy.visit(`http://127.0.0.1:8080/${path}`, {

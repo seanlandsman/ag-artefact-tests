@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ag-charts-community": "../../ag-charts-community-8.0.0.tgz"
+    "ag-charts-community": "~8.0.0"
   }
 }

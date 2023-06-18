@@ -1,17 +1,17 @@
 {
-  "name": "esm-packages",
+  "name": "plunker-community",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "css.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "ag-grid-community": "~30.0.0",
-    "ag-grid-enterprise": "~30.0.0"
+    "ag-grid-enterprise": "~30.0.0",
+    "ag-grid-react": "~30.0.0"
   }
 }
-
