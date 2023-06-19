@@ -6,54 +6,54 @@ rm *.tgz
 
 cd $SOURCE_FOLDER
 
-cd charts-community-modules/ag-charts-community
-npm pack --pack-destination $CWD
-cd -
-cd charts-enterprise-modules/ag-charts-enterprise
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/client-side-row-model
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/core
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/angular/dist/ag-grid-angular
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/styles
-npm pack --pack-destination $CWD
-cd -
-cd grid-enterprise-modules/status-bar
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/react
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/vue
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/vue3
-npm pack --pack-destination $CWD
-cd -
-cd grid-enterprise-modules/core
-npm pack --pack-destination $CWD
-cd -
+#cd charts-community-modules/ag-charts-community
+#npm pack --pack-destination $CWD
+#cd -
+#cd charts-enterprise-modules/ag-charts-enterprise
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-community-modules/client-side-row-model
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-community-modules/core
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-community-modules/angular/dist/ag-grid-angular
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-community-modules/styles
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-enterprise-modules/status-bar
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-community-modules/react
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-community-modules/vue
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-community-modules/vue3
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-enterprise-modules/core
+#npm pack --pack-destination $CWD
+#cd -
 cd grid-packages/ag-grid-community
 npm pack --pack-destination $CWD
 cd -
 cd grid-packages/ag-grid-enterprise
 npm pack --pack-destination $CWD
-cd -
-cd grid-packages/ag-grid-react
-npm pack --pack-destination $CWD
-cd -
-cd grid-packages/ag-grid-angular/dist/ag-grid-angular
-npm pack --pack-destination $CWD
-cd -
-cd grid-packages/ag-grid-vue
-npm pack --pack-destination $CWD
-cd -
+#cd -
+#cd grid-packages/ag-grid-react
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-packages/ag-grid-angular/dist/ag-grid-angular
+#npm pack --pack-destination $CWD
+#cd -
+#cd grid-packages/ag-grid-vue
+#npm pack --pack-destination $CWD
+#cd -
 
 cd $CWD
 

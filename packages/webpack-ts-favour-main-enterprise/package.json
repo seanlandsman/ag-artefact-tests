@@ -25,7 +25,7 @@
     "rimraf": "5.0.1"
   },
   "dependencies": {
-    "ag-grid-community": "../../ag-grid-community-30.0.1.tgz",
-    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.1.tgz"
+    "ag-grid-community": "../../ag-grid-community-30.0.2.tgz",
+    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.2.tgz"
   }
 }

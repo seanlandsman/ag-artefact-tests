@@ -2,7 +2,7 @@ const fs = require('fs')
 const projectRoots = ['modules', 'packages'];
 
 const literal = false;
-const version = "30.0.1";
+const version = "30.0.2";
 
 const patchDeps = (deps) => {
     Object.keys(deps).forEach(dependencyName => {

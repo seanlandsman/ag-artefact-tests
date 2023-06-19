@@ -10,8 +10,8 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "ag-grid-community": "../../ag-grid-community-30.0.1.tgz",
-    "ag-grid-react": "../../ag-grid-react-30.0.1.tgz",
+    "ag-grid-community": "../../ag-grid-community-30.0.2.tgz",
+    "ag-grid-react": "../../ag-grid-react-30.0.2.tgz",
     "rimraf": "5.0.1"
   },
   "scripts": {

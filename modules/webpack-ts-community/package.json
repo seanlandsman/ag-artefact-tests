@@ -25,8 +25,8 @@
     "rimraf": "5.0.1"
   },
   "dependencies": {
-    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.1.tgz",
-    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.1.tgz",
-    "@ag-grid-community/styles": "../../ag-grid-community-styles-30.0.1.tgz"
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.2.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.2.tgz",
+    "@ag-grid-community/styles": "../../ag-grid-community-styles-30.0.2.tgz"
   }
 }
