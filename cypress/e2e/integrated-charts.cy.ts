@@ -3,7 +3,7 @@ describe('Integrated Charts Tests', () => {
         {name: 'Integrated Charts', path: 'packages/integrated-charts', license: true},
     ].forEach(({name, path, license}) => {
         it(`license message printed ${name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${path}`, {
+            cy.visit(`http://127.0.0.1:8085/${path}`, {
                 onBeforeLoad(win: any) {
                     cy.spy(win.console, 'error').as('spyWinConsoleError');
                 },
@@ -22,7 +22,7 @@ describe('Integrated Charts Tests', () => {
         });
 
         it(`column headers match ${name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${path}`);
+            cy.visit(`http://127.0.0.1:8085/${path}`);
 
             cy.get(".ag-header-cell-text")
                 .should('have.length', 7)
@@ -31,7 +31,7 @@ describe('Integrated Charts Tests', () => {
         });
 
         it(`cell values match ${name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${path}`);
+            cy.visit(`http://127.0.0.1:8085/${path}`);
 
             cy.get(".ag-cell-value")
                 .should('have.length', 119)
@@ -41,14 +41,14 @@ describe('Integrated Charts Tests', () => {
         })
 
         it(`charts-wrapper-present ${name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${path}`);
+            cy.visit(`http://127.0.0.1:8085/${path}`);
 
             cy.get('div#myChart').children("div")
                 .should('have.class', 'ag-chart')
         });
 
         it(`canvas present and visible ${name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${path}`);
+            cy.visit(`http://127.0.0.1:8085/${path}`);
 
             cy.get('.ag-chart-wrapper').children("canvas")
                 .should('be.visible')

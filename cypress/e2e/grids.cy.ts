@@ -29,7 +29,7 @@ describe('Grid Tests', () => {
         {name: 'Packages: Webpack Enterprise Favour Main', path: 'packages/webpack-ts-favour-main-enterprise/dist', license: true},
         ].forEach(({name, path, license}) => {
         it(`license message ${license ? 'printed' : 'not shown'} ${name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${path}`, {
+            cy.visit(`http://127.0.0.1:8085/${path}`, {
                 onBeforeLoad(win: any) {
                     cy.spy(win.console, 'error').as('spyWinConsoleError');
                 },
@@ -48,7 +48,7 @@ describe('Grid Tests', () => {
         });
 
         it(`column headers match ${name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${path}`);
+            cy.visit(`http://127.0.0.1:8085/${path}`);
 
             cy.get(".ag-header-cell-text")
                 .should('have.length', 3)
@@ -57,7 +57,7 @@ describe('Grid Tests', () => {
         });
 
         it(`cell values match ${name}`, () => {
-            cy.visit(`http://127.0.0.1:8080/${path}`);
+            cy.visit(`http://127.0.0.1:8085/${path}`);
 
             cy.get(".ag-cell-value")
                 .should('have.length', 9)

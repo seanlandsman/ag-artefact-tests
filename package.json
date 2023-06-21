@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "npx lerna run clean",
-    "start-server": "nohup http-server . & echo $! > pid",
+    "start-server": "nohup http-server -p 8085 . & echo $! > pid",
     "build": "lerna run build --parallel",
     "test": "cypress run",
     "test:local": "cypress run --reporter list",

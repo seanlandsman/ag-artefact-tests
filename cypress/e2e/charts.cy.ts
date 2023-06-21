@@ -4,7 +4,7 @@
 //         // {name: 'Charts Enterprise', path: 'packages/charts-enterprise', license: true},
 //     ].forEach(({name, path, license}) => {
 //         it(`license message printed ${name}`, () => {
-//             cy.visit(`http://127.0.0.1:8080/${path}`, {
+//             cy.visit(`http://127.0.0.1:8085/${path}`, {
 //                 onBeforeLoad(win: any) {
 //                     cy.spy(win.console, 'error').as('spyWinConsoleError');
 //                 },
@@ -23,14 +23,14 @@
 //         });
 //
 //         it(`charts-wrapper-present ${name}`, () => {
-//             cy.visit(`http://127.0.0.1:8080/${path}`);
+//             cy.visit(`http://127.0.0.1:8085/${path}`);
 //
 //             cy.get('div#myChart').children("div")
 //                 .should('have.class', 'ag-chart-wrapper')
 //         });
 //
 //         it(`canvas present and visible ${name}`, () => {
-//             cy.visit(`http://127.0.0.1:8080/${path}`);
+//             cy.visit(`http://127.0.0.1:8085/${path}`);
 //
 //             cy.get('div#myChart').children("div")
 //                 .should('be.visible')
