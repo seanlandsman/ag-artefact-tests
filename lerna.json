@@ -2,7 +2,8 @@
   "packages": [
     "modules/*",
     "packages/*",
-    "esm/*"
+    "esm/*",
+    "charts/*"
   ],
   "command": {
     "bootstrap": {

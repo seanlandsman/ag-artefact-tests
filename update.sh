@@ -57,7 +57,7 @@ cd -
 
 cd $CWD
 
-for directory in 'modules' 'packages';
+for directory in 'modules' 'packages' 'charts';
 do
   for subDirectory in ./$directory/*;
   do
