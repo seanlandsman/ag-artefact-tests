@@ -27,6 +27,9 @@ cd -
 cd grid-enterprise-modules/status-bar
 npm pack --pack-destination $CWD
 cd -
+cd grid-enterprise-modules/master-detail
+npm pack --pack-destination $CWD
+cd -
 cd grid-community-modules/react
 npm pack --pack-destination $CWD
 cd -
