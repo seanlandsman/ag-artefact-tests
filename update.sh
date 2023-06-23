@@ -6,57 +6,37 @@ rm *.tgz
 
 cd $SOURCE_FOLDER
 
-cd charts-community-modules/ag-charts-community
-npm pack --pack-destination $CWD
-cd -
-cd charts-enterprise-modules/ag-charts-enterprise
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/client-side-row-model
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/core
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/angular/dist/ag-grid-angular
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/styles
-npm pack --pack-destination $CWD
-cd -
-cd grid-enterprise-modules/status-bar
-npm pack --pack-destination $CWD
-cd -
-cd grid-enterprise-modules/master-detail
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/react
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/vue
-npm pack --pack-destination $CWD
-cd -
-cd grid-community-modules/vue3
-npm pack --pack-destination $CWD
-cd -
-cd grid-enterprise-modules/core
-npm pack --pack-destination $CWD
-cd -
-cd grid-packages/ag-grid-community
-npm pack --pack-destination $CWD
-cd -
-cd grid-packages/ag-grid-enterprise
-npm pack --pack-destination $CWD
-cd -
-cd grid-packages/ag-grid-react
-npm pack --pack-destination $CWD
-cd -
-cd grid-packages/ag-grid-angular/dist/ag-grid-angular
-npm pack --pack-destination $CWD
-cd -
-cd grid-packages/ag-grid-vue
-npm pack --pack-destination $CWD
-cd -
+function packModule() {
+  local PARENT_DIRECTORY=$1
+  local MODULE=$2
+
+  cd "$PARENT_DIRECTORY/$MODULE"
+  npm pack --pack-destination $CWD
+  cd -
+}
+
+function packModules() {
+  local PARENT_DIRECTORY=$1
+  shift
+  local MODULES=("$@")
+
+  for MODULE in "${MODULES[@]}";
+  do
+     packModule $PARENT_DIRECTORY $MODULE;
+  done
+}
+
+packModule "charts-community-modules" "ag-charts-community"
+packModule "charts-enterprise-modules" "ag-charts-enterprise"
+
+GRID_COMMUNITY_MODULES=("core" "client-side-row-model" "react" "angular/dist/ag-grid-angular" "styles" "react" "vue" "vue3")
+packModules "grid-community-modules" "${GRID_COMMUNITY_MODULES[@]}"
+
+GRID_ENTERPRISE_MODULES=("core" "status-bar" "master-detail")
+packModules "grid-enterprise-modules" "${GRID_ENTERPRISE_MODULES[@]}"
+
+GRID_PACKAGES=("ag-grid-community" "ag-grid-enterprise" "ag-grid-react" "ag-grid-angular/dist/ag-grid-angular" "ag-grid-vue")
+packModules "grid-packages" "${GRID_PACKAGES[@]}"
 
 cd $CWD
 
