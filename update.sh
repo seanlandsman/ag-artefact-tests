@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 SOURCE_FOLDER=$1
 
 CWD=`pwd`;
