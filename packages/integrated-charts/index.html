@@ -3,8 +3,8 @@
 <head>
     <title>JavaScript example</title>
     <meta charSet="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta http-equiv="last-modified" content="Wed Jun 14 2023 16:33:06 GMT+0100 (British Summer Time)"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Wed Jun 14 2023 16:33:06 GMT+0100 (British Summer Time)" http-equiv="last-modified"/>
     <style>
         .wrapper {
             display: flex;
@@ -53,13 +53,13 @@
             overflow: auto;
         }
     </style>
-    <link rel="stylesheet" href="./node_modules/ag-grid-enterprise/styles/ag-grid.css"/>
-    <link rel="stylesheet" href="./node_modules/ag-grid-enterprise/styles/ag-theme-alpine.css"/>
+    <link href="./node_modules/ag-grid-enterprise/styles/ag-grid.css" rel="stylesheet"/>
+    <link href="./node_modules/ag-grid-enterprise/styles/ag-theme-alpine.css" rel="stylesheet"/>
 </head>
 <body>
-<div id="myApp" class="wrapper">
-    <div id="myGrid" class="ag-theme-alpine-dark my-grid"></div>
-    <div id="myChart" class="ag-theme-alpine-dark my-chart"></div>
+<div class="wrapper" id="myApp">
+    <div class="ag-theme-alpine-dark my-grid" id="myGrid"></div>
+    <div class="ag-theme-alpine-dark my-chart" id="myChart"></div>
 </div>
 <script>var __basePath = './';</script>
 <script src="./node_modules/ag-grid-enterprise/dist/ag-grid-enterprise.js">
@@ -69,17 +69,17 @@
     const gridOptions = {
         columnDefs: [
             // different ways to define 'categories'
-            { field: 'athlete', width: 150, chartDataType: 'category' },
-            { field: 'age', chartDataType: 'category', sort: 'asc' },
-            { field: 'sport' }, // inferred as category by grid
+            {field: 'athlete', width: 150, chartDataType: 'category'},
+            {field: 'age', chartDataType: 'category', sort: 'asc'},
+            {field: 'sport'}, // inferred as category by grid
 
             // excludes year from charts
-            { field: 'year', chartDataType: 'excluded' },
+            {field: 'year', chartDataType: 'excluded'},
 
             // different ways to define 'series'
-            { field: 'gold', chartDataType: 'series' },
-            { field: 'silver', chartDataType: 'series' },
-            { field: 'bronze' }, // inferred as series by grid
+            {field: 'gold', chartDataType: 'series'},
+            {field: 'silver', chartDataType: 'series'},
+            {field: 'bronze'}, // inferred as series by grid
         ],
         defaultColDef: {
             editable: true,

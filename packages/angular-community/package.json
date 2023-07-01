@@ -7,7 +7,7 @@
     "start": "npm run clean && ng serve",
     "build": "npm run clean && ng build --base-href=/packages/angular-community/dist/my-app/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "testx": "ng test"
   },
   "private": true,
   "dependencies": {

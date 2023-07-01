@@ -19,7 +19,7 @@
     "clean": "rimraf build",
     "start": "HOST= npm run clean && react-scripts start",
     "build": "npm run clean && react-scripts build",
-    "test": "react-scripts test",
+    "testx": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

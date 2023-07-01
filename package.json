@@ -7,8 +7,9 @@
     "clean": "npx lerna run clean",
     "start-server": "nohup http-server -p 8085 . > http.log 2>&1 & echo $! > pid",
     "build": "lerna run build --parallel",
-    "test": "cypress run",
-    "test:local": "cypress run --reporter list",
+    "test:individual-projects": "npx lerna run test",
+    "test:cypress": "cypress run --reporter list",
+    "test": "npm run test:cypress && npm run test:individual-projects",
     "stop-server": "kill -9 `cat pid` 2> /dev/null"
   },
   "keywords": [],

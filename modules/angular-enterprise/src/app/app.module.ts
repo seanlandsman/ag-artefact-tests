@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AgGridModule } from '@ag-grid-community/angular';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AgGridModule} from '@ag-grid-community/angular';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 
 
 @NgModule({
@@ -15,4 +15,5 @@ import { AppComponent } from './app.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -28,7 +28,9 @@ function packModules() {
   done
 }
 
-packModule "charts-community-modules" "ag-charts-community"
+CHARTS_COMMUNITY_MODULES=("ag-charts-community" "ag-charts-react" "ag-charts-angular/dist/ag-charts-angular" )
+packModules "charts-community-modules" "${CHARTS_COMMUNITY_MODULES[@]}"
+
 packModule "charts-enterprise-modules" "ag-charts-enterprise"
 
 GRID_COMMUNITY_MODULES=("core" "client-side-row-model" "react" "angular/dist/ag-grid-angular" "styles" "react" "vue" "vue3")

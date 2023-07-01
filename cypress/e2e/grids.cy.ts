@@ -8,6 +8,8 @@ describe('Grid Tests', () => {
         {name: 'Modules: Webpack Enterprise', path: 'modules/webpack-ts-enterprise/dist/', license: true},
         {name: 'Modules: ESM Community', path: 'modules/esm/modulesCommunity.html', license: false},
         {name: 'Modules: ESM Enterprise', path: 'modules/esm/modulesEnterprise.html', license: true},
+        {name: 'Modules: Vitest Community', path: 'modules/vitest-community/dist', license: false},
+        {name: 'Modules: Vitest Enterprise', path: 'modules/vitest-enterprise/dist', license: true},
         {name: 'Packages: Vanilla Community', path: 'packages/vanilla/community.html', license: false},
         {name: 'Packages: Vanilla Enterprise', path: 'packages/vanilla/enterprise.html', license: true},
         {name: 'Packages: Angular Community', path: 'packages/angular-community/dist/my-app/', license: false},
@@ -27,6 +29,8 @@ describe('Grid Tests', () => {
         {name: 'Packages: Vue 2 Community', path: 'packages/vue2-community/dist', license: false},
         {name: 'Packages: Webpack Community Favour Main', path: 'packages/webpack-ts-favour-main-community/dist', license: false},
         {name: 'Packages: Webpack Enterprise Favour Main', path: 'packages/webpack-ts-favour-main-enterprise/dist', license: true},
+        {name: 'Packages: Vitest Community', path: 'packages/vitest-community/dist', license: false},
+        {name: 'Packages: Vitest Enterprise', path: 'packages/vitest-enterprise/dist', license: true},
         ].forEach(({name, path, license}) => {
         it(`license message ${license ? 'printed' : 'not shown'} ${name}`, () => {
             cy.visit(`http://127.0.0.1:8085/${path}`, {

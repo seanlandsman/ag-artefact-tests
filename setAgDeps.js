@@ -1,10 +1,12 @@
 const fs = require('fs')
-const projectRoots = ['modules', 'packages'];
+const gridProjectRoots = ['modules', 'packages'];
+const chartProjectRoots = ['charts'];
 
 const literal = false;
-const version = "30.0.2";
+const gridVersion = "30.0.2";
+const chartVersion = "8.0.0";
 
-const patchDeps = (deps) => {
+const patchDeps = (deps, version) => {
     Object.keys(deps).forEach(dependencyName => {
         if (dependencyName.startsWith("@ag-") || dependencyName.startsWith("ag-")) {
             const zippedFilename = dependencyName.replaceAll("/", "-").replaceAll("@", "")
@@ -13,19 +15,27 @@ const patchDeps = (deps) => {
     })
 }
 
-projectRoots.forEach(root => {
+function processProjects(root, version) {
     const subDirs = fs.readdirSync(root);
     subDirs.forEach(subDir => {
         const packageJsonFile = `./${root}/${subDir}/package.json`;
         const packageJson = require(packageJsonFile);
-        if(packageJson.devDependencies) {
-            patchDeps(packageJson.devDependencies);
+        if (packageJson.devDependencies) {
+            patchDeps(packageJson.devDependencies, version);
         }
-        if(packageJson.dependencies) {
-            patchDeps(packageJson.dependencies);
+        if (packageJson.dependencies) {
+            patchDeps(packageJson.dependencies, version);
         }
 
         fs.writeFileSync(packageJsonFile, JSON.stringify(packageJson, null, 2), 'utf-8')
     })
+}
+
+gridProjectRoots.forEach(root => {
+    processProjects(root, gridVersion);
+})
+
+chartProjectRoots.forEach(root => {
+    processProjects(root, chartVersion);
 })
 
