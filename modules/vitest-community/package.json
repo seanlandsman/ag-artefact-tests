@@ -1,0 +1,39 @@
+{
+  "name": "vitest-modules-community",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "vite",
+    "build": "npm run clean && tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "testx": "vitest run"
+  },
+  "dependencies": {
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.2.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.2.tgz",
+    "@ag-grid-community/react": "../../ag-grid-community-react-30.0.2.tgz",
+    "@ag-grid-community/styles": "../../ag-grid-community-styles-30.0.2.tgz",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "happy-dom": "^9.20.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.2",
+    "rimraf": "5.0.1"
+  }
+}
