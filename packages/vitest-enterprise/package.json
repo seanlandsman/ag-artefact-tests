@@ -5,10 +5,10 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite",
-    "buildx": "npm run clean && tsc && vite build",
+    "build": "npm run clean && tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "testx": "vitest run"
+    "test": "vitest run"
   },
   "dependencies": {
     "ag-grid-community": "../../ag-grid-community-30.0.5.tgz",
