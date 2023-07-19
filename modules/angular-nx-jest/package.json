@@ -9,9 +9,9 @@
   },
   "private": true,
   "dependencies": {
-    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.2.tgz",
-    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.2.tgz",
-    "@ag-grid-community/angular": "../../ag-grid-community-angular-30.0.2.tgz",
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.5.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.5.tgz",
+    "@ag-grid-community/angular": "../../ag-grid-community-angular-30.0.5.tgz",
     "@angular/animations": "~16.1.0",
     "@angular/common": "~16.1.0",
     "@angular/compiler": "~16.1.0",

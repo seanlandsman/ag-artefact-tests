@@ -8,10 +8,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.2.tgz",
-    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.2.tgz",
-    "@ag-grid-community/styles": "../../ag-grid-community-styles-30.0.2.tgz",
-    "@ag-grid-enterprise/core": "../../ag-grid-enterprise-core-30.0.2.tgz",
-    "@ag-grid-enterprise/status-bar": "../../ag-grid-enterprise-status-bar-30.0.2.tgz"
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.5.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.5.tgz",
+    "@ag-grid-community/styles": "../../ag-grid-community-styles-30.0.5.tgz",
+    "@ag-grid-enterprise/core": "../../ag-grid-enterprise-core-30.0.5.tgz",
+    "@ag-grid-enterprise/status-bar": "../../ag-grid-enterprise-status-bar-30.0.5.tgz"
   }
 }
