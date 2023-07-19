@@ -5,14 +5,14 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite",
-    "build": "npm run clean && tsc && vite build",
+    "buildx": "npm run clean && tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest run"
+    "testx": "vitest run"
   },
   "dependencies": {
-    "ag-grid-community": "../../ag-grid-community-30.0.2.tgz",
-    "ag-grid-react": "../../ag-grid-react-30.0.2.tgz",
+    "ag-grid-community": "../../ag-grid-community-30.0.5.tgz",
+    "ag-grid-react": "../../ag-grid-react-30.0.5.tgz",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
