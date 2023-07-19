@@ -10,9 +10,9 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "ag-charts-community": "../../ag-charts-community-8.0.0.tgz",
-    "ag-charts-enterprise": "../../ag-charts-enterprise-8.0.0.tgz",
-    "ag-charts-react": "../../ag-charts-react-8.0.0.tgz",
+    "ag-charts-community": "../../ag-charts-community-8.0.5.tgz",
+    "ag-charts-enterprise": "../../ag-charts-enterprise-8.0.5.tgz",
+    "ag-charts-react": "../../ag-charts-react-8.0.5.tgz",
     "rimraf": "5.0.1"
   },
   "scripts": {
