@@ -8,6 +8,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.5.tgz"
+    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.6.tgz"
   }
 }

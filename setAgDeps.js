@@ -3,8 +3,8 @@ const gridProjectRoots = ['modules', 'packages'];
 const chartProjectRoots = ['charts'];
 
 const literal = false;
-const gridVersion = "30.0.5";
-const chartVersion = "8.0.5";
+const gridVersion = "30.0.6";
+const chartVersion = "8.0.6";
 
 const patchDeps = (deps, version) => {
     Object.keys(deps).forEach(dependencyName => {

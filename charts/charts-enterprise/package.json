@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {},
   "dependencies": {
-    "ag-charts-enterprise": "../../ag-charts-enterprise-8.0.5.tgz"
+    "ag-charts-enterprise": "../../ag-charts-enterprise-8.0.6.tgz"
   },
   "keywords": [],
   "author": "",

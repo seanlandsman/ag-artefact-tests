@@ -14,6 +14,8 @@ describe('Grid Tests', () => {
         {name: 'Packages: Vanilla Enterprise', path: 'packages/vanilla/enterprise.html', license: true},
         {name: 'Packages: Angular Community', path: 'packages/angular-community/dist/my-app/', license: false},
         {name: 'Packages: Angular Enterprise', path: 'packages/angular-enterprise/dist/my-app/', license: true},
+        {name: 'Packages: React 17 Community', path: 'packages/react-17-community/build/', license: false},
+        {name: 'Packages: React 17 Enterprise', path: 'packages/react-17-enterprise/build/', license: true},
         {name: 'Packages: React Community', path: 'packages/react-community/build/', license: false},
         {name: 'Packages: React Enterprise', path: 'packages/react-enterprise/build/', license: true},
         {name: 'Packages: Webpack Community', path: 'packages/webpack-ts-community/dist/', license: false},

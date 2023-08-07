@@ -9,6 +9,7 @@
     "build": "lerna run build --parallel",
     "test:individual-projects": "npx lerna run test",
     "test:cypress": "cypress run --reporter list",
+    "test:charts": "cypress run --reporter list --spec 'cypress/e2e/charts.cy.ts'",
     "test": "npm run test:cypress && npm run test:individual-projects",
     "stop-server": "kill -9 `cat pid` 2> /dev/null"
   },

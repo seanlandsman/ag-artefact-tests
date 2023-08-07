@@ -1,0 +1,25 @@
+{
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "jest",
+      "@testing-library/jest-dom"
+    ],
+    "target": "es2017",
+    "module": "esnext",
+    "allowJs": true,
+    "checkJs": false,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+}

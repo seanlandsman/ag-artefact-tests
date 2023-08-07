@@ -1,0 +1,14 @@
+{
+  "name": "vanilla-charts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ag-charts-community": "../../ag-charts-community-8.0.6.tgz",
+    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.6.tgz"
+  }
+}

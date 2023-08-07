@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {AgChartsReact} from 'ag-charts-react';
 
+// spl todo - this fails when a test is run
 import 'ag-charts-enterprise';
 
 const App = () => {
