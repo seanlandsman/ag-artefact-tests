@@ -19,15 +19,17 @@ function processProjects(root, version) {
     const subDirs = fs.readdirSync(root);
     subDirs.forEach(subDir => {
         const packageJsonFile = `./${root}/${subDir}/package.json`;
-        const packageJson = require(packageJsonFile);
-        if (packageJson.devDependencies) {
-            patchDeps(packageJson.devDependencies, version);
-        }
-        if (packageJson.dependencies) {
-            patchDeps(packageJson.dependencies, version);
-        }
+        if (fs.existsSync(packageJsonFile)) {
+            const packageJson = require(packageJsonFile);
+            if (packageJson.devDependencies) {
+                patchDeps(packageJson.devDependencies, version);
+            }
+            if (packageJson.dependencies) {
+                patchDeps(packageJson.dependencies, version);
+            }
 
-        fs.writeFileSync(packageJsonFile, JSON.stringify(packageJson, null, 2), 'utf-8')
+            fs.writeFileSync(packageJsonFile, JSON.stringify(packageJson, null, 2), 'utf-8')
+        }
     })
 }
 

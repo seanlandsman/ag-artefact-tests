@@ -42,7 +42,9 @@
     "ag-grid-react": "../../ag-grid-react-30.0.6.tgz"
   },
   "jest": {
-    "roots": ["./src"],
+    "roots": [
+      "./src"
+    ],
     "collectCoverageFrom": [
       "./src/**/*.{js,jsx,ts,tsx}",
       "!**/*.test.{js,jsx,ts,tsx}",
