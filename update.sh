@@ -4,7 +4,7 @@ SOURCE_FOLDER=$1
 
 CWD=`pwd`;
 
-rm *.tgz
+#rm *.tgz
 
 cd $SOURCE_FOLDER
 
@@ -36,7 +36,7 @@ packModule "charts-enterprise-modules" "ag-charts-enterprise"
 GRID_COMMUNITY_MODULES=("core" "client-side-row-model" "react" "angular/dist/ag-grid-angular" "styles" "react" "vue" "vue3")
 packModules "grid-community-modules" "${GRID_COMMUNITY_MODULES[@]}"
 
-GRID_ENTERPRISE_MODULES=("core" "status-bar" "master-detail")
+GRID_ENTERPRISE_MODULES=("core" "status-bar" "master-detail" "excel-export" "filter-tool-panel" "master-detail" "menu" "multi-filter" "range-selection" "rich-select" "row-grouping" "row-grouping" "side-bar" "set-filter" "charts")
 packModules "grid-enterprise-modules" "${GRID_ENTERPRISE_MODULES[@]}"
 
 GRID_PACKAGES=("ag-grid-community" "ag-grid-enterprise" "ag-grid-react" "ag-grid-angular/dist/ag-grid-angular" "ag-grid-vue")
@@ -48,9 +48,9 @@ for directory in 'modules' 'packages' 'charts';
 do
   for subDirectory in ./$directory/*;
   do
-	  cd "$subDirectory/node_modules"
-	  rm -rf ag-charts-community ag-charts-enterprise @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise
-	  cd -
+	  cd "$subDirectory/node_modules" > /dev/null
+	  rm -rf ag-charts-community ag-charts-enterprise @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise > /dev/null
+	  cd - > /dev/null
 	done
 done
 
