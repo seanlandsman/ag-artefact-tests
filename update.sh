@@ -4,7 +4,7 @@ SOURCE_FOLDER=$1
 
 CWD=`pwd`;
 
-#rm *.tgz
+rm *.tgz
 
 cd $SOURCE_FOLDER
 
@@ -28,11 +28,11 @@ function packModules() {
   done
 }
 
-CHARTS_COMMUNITY_MODULES=("ag-charts-community" "ag-charts-react" "ag-charts-angular/dist/ag-charts-angular" )
-packModules "charts-community-modules" "${CHARTS_COMMUNITY_MODULES[@]}"
-
-packModule "charts-enterprise-modules" "ag-charts-enterprise"
-
+#CHARTS_COMMUNITY_MODULES=("ag-charts-community" "ag-charts-react" "ag-charts-angular/dist/ag-charts-angular" )
+#packModules "charts-community-modules" "${CHARTS_COMMUNITY_MODULES[@]}"
+#
+#packModule "charts-enterprise-modules" "ag-charts-enterprise"
+#
 GRID_COMMUNITY_MODULES=("core" "client-side-row-model" "react" "angular/dist/ag-grid-angular" "styles" "react" "vue" "vue3")
 packModules "grid-community-modules" "${GRID_COMMUNITY_MODULES[@]}"
 
@@ -54,4 +54,5 @@ do
 	done
 done
 
-npx lerna bootstrap --no-ci
+npx lerna bootstrap --no-ci --registry http://54.194.75.252:4873
+#npx lerna bootstrap --no-ci

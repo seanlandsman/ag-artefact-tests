@@ -3,14 +3,23 @@ const gridProjectRoots = ['modules', 'packages'];
 const chartProjectRoots = ['charts'];
 
 const literal = false;
-const gridVersion = "30.0.6";
-const chartVersion = "8.0.6";
+const gridVersion = "30.2.0";
+const chartVersion = "latest";
 
 const patchDeps = (deps, version) => {
     Object.keys(deps).forEach(dependencyName => {
         if (dependencyName.startsWith("@ag-") || dependencyName.startsWith("ag-")) {
             const zippedFilename = dependencyName.replaceAll("/", "-").replaceAll("@", "")
             deps[dependencyName] = literal ? version : `../../${zippedFilename}-${version}.tgz`
+        }
+    })
+}
+
+const patchChartsDeps = (deps, version) => {
+    Object.keys(deps).forEach(dependencyName => {
+        if (dependencyName.startsWith("@ag-") || dependencyName.startsWith("ag-")) {
+            const zippedFilename = dependencyName.replaceAll("/", "-").replaceAll("@", "")
+            deps[dependencyName] = version;
         }
     })
 }
@@ -33,11 +42,29 @@ function processProjects(root, version) {
     })
 }
 
+function processChartsProjects(root, version) {
+    const subDirs = fs.readdirSync(root);
+    subDirs.forEach(subDir => {
+        const packageJsonFile = `./${root}/${subDir}/package.json`;
+        if (fs.existsSync(packageJsonFile)) {
+            const packageJson = require(packageJsonFile);
+            if (packageJson.devDependencies) {
+                patchChartsDeps(packageJson.devDependencies, version);
+            }
+            if (packageJson.dependencies) {
+                patchChartsDeps(packageJson.dependencies, version);
+            }
+
+            fs.writeFileSync(packageJsonFile, JSON.stringify(packageJson, null, 2), 'utf-8')
+        }
+    })
+}
+
 gridProjectRoots.forEach(root => {
     processProjects(root, gridVersion);
 })
 
 chartProjectRoots.forEach(root => {
-    processProjects(root, chartVersion);
+    processChartsProjects(root, chartVersion);
 })
 

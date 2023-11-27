@@ -11,9 +11,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "ag-grid-community": "../../ag-grid-community-30.0.6.tgz",
-    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.6.tgz",
-    "ag-grid-react": "../../ag-grid-react-30.0.6.tgz",
+    "ag-grid-community": "../../ag-grid-community-30.2.0.tgz",
+    "ag-grid-enterprise": "../../ag-grid-enterprise-30.2.0.tgz",
+    "ag-grid-react": "../../ag-grid-react-30.2.0.tgz",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -30,7 +30,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "happy-dom": "^9.20.3",
-    "typescript": "^5.0.2",
+    "typescript": "5.0.2",
     "vite": "^4.3.9",
     "vitest": "^0.32.2",
     "rimraf": "5.0.1"

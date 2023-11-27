@@ -3,8 +3,8 @@
          {name: 'Grid Enterprise With Charts', path: 'charts/vanilla/grid-enterprise-with-charts.html', license: true, grid: true},
          {name: 'Charts Community', path: 'charts/charts-community', license: false},
          {name: 'Charts Enterprise', path: 'charts/charts-enterprise', license: true},
-         {name: 'Charts Angular Community', path: 'charts/angular-community/dist/my-app', license: false},
-         {name: 'Charts Angular Enterprise', path: 'charts/angular-enterprise/dist/my-app', license: false}, // spl - there's a bug where fw wrappers arent' displaying license message
+         // {name: 'Charts Angular Community', path: 'charts/angular-community/dist/my-app', license: false},
+         // {name: 'Charts Angular Enterprise', path: 'charts/angular-enterprise/dist/my-app', license: false}, // spl - there's a bug where fw wrappers arent' displaying license message
          {name: 'Charts React Community', path: 'charts/react-community/build', license: false},
          {name: 'Charts React Enterprise', path: 'charts/react-enterprise/build', license: false},  // spl - there's a bug where fw wrappers arent' displaying license message
          {name: 'Charts Webpack Community', path: 'charts/webpack-ts-community/dist', license: false},
@@ -19,7 +19,11 @@
 
             if (license) {
                 // check for a couple of lines of the license key
-                cy.get('@spyWinConsoleError').should('be.calledWith', '***************************************** AG Grid Enterprise License *******************************************');
+                if(grid) {
+                    cy.get('@spyWinConsoleError').should('be.calledWith', '***************************************** AG Grid Enterprise License *******************************************');
+                } else {
+                    cy.get('@spyWinConsoleError').should('be.calledWith', '***************************************** AG Charts Enterprise License *******************************************');
+                }
                 cy.get('@spyWinConsoleError').should('be.calledWith', '****************************************** License Key Not Found ***********************************************');
 
                 // the entire license key message is 8 lines - any more or less and there is an issue

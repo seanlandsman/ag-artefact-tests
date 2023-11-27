@@ -1,9 +1,11 @@
+const frameworks = ['angular', 'react', 'vue', 'vue3']
+
 module.exports = (request, options) => {
     return options.defaultResolver(request, {
         ...options,
         packageFilter: pkg => {
             const packageName = pkg.name;
-            if(packageName === '@ag-grid-community/angular' || packageName === 'ag-grid-angular') {
+            if(frameworks.some(framework => packageName.includes(framework))) {
                 return {
                     ...pkg,
                 };

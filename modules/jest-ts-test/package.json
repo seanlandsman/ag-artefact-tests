@@ -14,7 +14,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.0.6.tgz",
-    "@ag-grid-community/core": "../../ag-grid-community-core-30.0.6.tgz"
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.2.0.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-30.2.0.tgz"
   }
 }

@@ -1,4 +1,4 @@
-import { AgEnterpriseCharts, AgPolarChartOptions } from 'ag-charts-enterprise';
+import { AgCharts, AgPolarChartOptions } from 'ag-charts-enterprise';
 import 'ag-charts-enterprise';
 
 class Chart {
@@ -32,7 +32,7 @@ class Chart {
             },
         };
 
-        AgEnterpriseCharts.create(this.options);
+        AgCharts.create(this.options);
     }
 }
 

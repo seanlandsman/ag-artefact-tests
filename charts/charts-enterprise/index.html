@@ -31,7 +31,7 @@
 <div id="myChart" style="height: 100%;">
 </div>
 <script>var __basePath = './';</script>
-<script src="./node_modules/ag-charts-enterprise/dist/ag-charts-enterprise.js">
+<script src="./node_modules/ag-charts-enterprise/dist/umd/ag-charts-enterprise.js">
 </script>
 <script>
     // Source: http://www.sheffieldweather.co.uk/Averages/MONTHLYAIRAVERAGE.htm
@@ -92,25 +92,25 @@
         },
         series: [
             {
-                type: "waterfall-column",
+                type: "waterfall",
                 xKey: "date",
                 xName: "Date",
                 yKey: "amount",
                 yName: "Amount",
-                label: {
-                    enabled: true,
-                    placement: "inside",
-                },
-                positiveItem: {
-                    fill: "#91CC75",
-                    stroke: "#91CC75",
-                    name: "Revenue",
-                },
-                negativeItem: {
-                    fill: "#D21E75",
-                    stroke: "#D21E75",
-                    name: "Product Cost",
-                },
+                // label: {
+                //     enabled: true,
+                //     placement: "inside",
+                // },
+                // positiveItem: {
+                //     fill: "#91CC75",
+                //     stroke: "#91CC75",
+                //     name: "Revenue",
+                // },
+                // negativeItem: {
+                //     fill: "#D21E75",
+                //     stroke: "#D21E75",
+                //     name: "Product Cost",
+                // },
                 highlightStyle: {
                     series: {
                         dimOpacity: 0.5,
@@ -129,7 +129,7 @@
         },
     }
 
-    agChartsEnterprise.AgEnterpriseCharts.create(options)
+    agCharts.AgCharts.create(options)
 </script>
 </body>
 </html>

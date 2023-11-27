@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "ag-charts-community": "../../ag-charts-community-8.0.6.tgz",
-    "ag-grid-enterprise": "../../ag-grid-enterprise-30.0.6.tgz"
+    "ag-charts-community": "latest",
+    "ag-grid-enterprise": "latest"
   }
 }

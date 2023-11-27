@@ -25,7 +25,7 @@
     "rimraf": "5.0.1"
   },
   "dependencies": {
-    "ag-charts-community": "../../ag-charts-community-8.0.6.tgz",
-    "ag-charts-enterprise": "../../ag-charts-enterprise-8.0.6.tgz"
+    "ag-charts-community": "latest",
+    "ag-charts-enterprise": "latest"
   }
 }

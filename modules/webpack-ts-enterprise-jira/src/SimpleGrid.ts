@@ -1,4 +1,4 @@
-import {Grid, GridOptions, ModuleRegistry} from "@ag-grid-community/core";
+import {createGrid, GridOptions, ModuleRegistry} from "@ag-grid-community/core";
 import {ClientSideRowModelModule} from "@ag-grid-community/client-side-row-model";
 import {StatusBarModule} from "@ag-grid-enterprise/status-bar";
 
@@ -55,12 +55,12 @@ class SimpleGrid {
     constructor() {
 
         let eGridDiv: HTMLElement = <HTMLElement>document.querySelector('#myGrid');
-        new Grid(eGridDiv, this.gridOptions, {modules: [StatusBarModule]});
+        const gridApi = createGrid(eGridDiv, this.gridOptions, {modules: [StatusBarModule]});
 
         fetch('https://www.ag-grid.com/example-assets/master-detail-data.json')
             .then(response => response.json())
             .then((data) => {
-                this.gridOptions.api!.setRowData(data)
+                gridApi.setRowData(data)
             })
 
     }

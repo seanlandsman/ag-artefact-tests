@@ -5,7 +5,7 @@
     "ng": "ng",
     "clean": "rimraf .angular dist",
     "start": "npm run clean && ng serve",
-    "build": "npm run clean && ng build --base-href=/charts/angular-enterprise/dist/my-app/",
+    "buildx": "npm run clean && ng build --base-href=/charts/angular-enterprise/dist/my-app/",
     "watch": "ng build --watch --configuration development",
     "testx": "ng test"
   },
@@ -22,9 +22,9 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0",
-    "ag-charts-community": "../../ag-charts-community-8.0.6.tgz",
-    "ag-charts-enterprise": "../../ag-charts-enterprise-8.0.6.tgz",
-    "ag-charts-angular": "../../ag-charts-angular-8.0.6.tgz"
+    "ag-charts-community": "latest",
+    "ag-charts-enterprise": "latest",
+    "ag-charts-angular": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.5",
