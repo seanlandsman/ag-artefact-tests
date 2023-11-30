@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AgEnterpriseCharts, AgPolarChartOptions } from 'ag-charts-enterprise';
+import { AgPolarChartOptions } from 'ag-charts-enterprise';
 import 'ag-charts-enterprise';
 
 function getImageURL() {
