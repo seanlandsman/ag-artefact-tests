@@ -5,7 +5,7 @@
     "ng": "ng",
     "clean": "rimraf .angular dist",
     "start": "npm run clean && ng serve",
-    "buildx": "npm run clean && ng build --base-href=/charts/angular-community/dist/my-app/",
+    "build": "npm run clean && ng build --base-href=/charts/angular-community/dist/my-app/",
     "watch": "ng build --watch --configuration development",
     "testx": "ng test"
   },

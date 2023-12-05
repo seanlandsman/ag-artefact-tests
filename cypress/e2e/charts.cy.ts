@@ -4,7 +4,7 @@
          {name: 'Charts Community', path: 'charts/charts-community', license: false},
          {name: 'Charts Enterprise', path: 'charts/charts-enterprise', license: true},
          {name: 'Charts Angular Community', path: 'charts/angular-community/dist/my-app', license: false},
-         {name: 'Charts Angular Enterprise', path: 'charts/angular-enterprise/dist/my-app', license: false},
+         {name: 'Charts Angular Enterprise', path: 'charts/angular-enterprise/dist/my-app', license: true},
          {name: 'Charts React Community', path: 'charts/react-community/build', license: false},
          {name: 'Charts React Enterprise', path: 'charts/react-enterprise/build', license: false},
          {name: 'Charts Webpack Community', path: 'charts/webpack-ts-community/dist', license: false},
