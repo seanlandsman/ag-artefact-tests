@@ -3,7 +3,7 @@ const gridProjectRoots = ['modules', 'packages'];
 const chartProjectRoots = ['charts'];
 
 const literal = false;
-const gridVersion = "30.2.0";
+const gridVersion = "31.0.0";
 const chartVersion = "latest";
 
 const patchDeps = (deps, version) => {

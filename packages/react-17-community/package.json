@@ -9,8 +9,8 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-scripts": "5.0.1",
-    "ag-grid-community": "../../ag-grid-community-30.2.0.tgz",
-    "ag-grid-react": "../../ag-grid-react-30.2.0.tgz",
+    "ag-grid-community": "../../ag-grid-community-31.0.0.tgz",
+    "ag-grid-react": "../../ag-grid-react-31.0.0.tgz",
     "rimraf": "5.0.1"
   },
   "scripts": {

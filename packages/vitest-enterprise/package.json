@@ -11,9 +11,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "ag-grid-community": "../../ag-grid-community-30.2.0.tgz",
-    "ag-grid-enterprise": "../../ag-grid-enterprise-30.2.0.tgz",
-    "ag-grid-react": "../../ag-grid-react-30.2.0.tgz",
+    "ag-grid-community": "../../ag-grid-community-31.0.0.tgz",
+    "ag-grid-enterprise": "../../ag-grid-enterprise-31.0.0.tgz",
+    "ag-grid-react": "../../ag-grid-react-31.0.0.tgz",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

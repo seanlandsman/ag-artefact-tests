@@ -11,10 +11,10 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-30.2.0.tgz",
-    "@ag-grid-community/core": "../../ag-grid-community-core-30.2.0.tgz",
-    "@ag-grid-community/react": "../../ag-grid-community-react-30.2.0.tgz",
-    "@ag-grid-community/styles": "../../ag-grid-community-styles-30.2.0.tgz",
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-31.0.0.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-31.0.0.tgz",
+    "@ag-grid-community/react": "../../ag-grid-community-react-31.0.0.tgz",
+    "@ag-grid-community/styles": "../../ag-grid-community-styles-31.0.0.tgz",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
