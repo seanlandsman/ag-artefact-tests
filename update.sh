@@ -6,6 +6,9 @@ CWD=`pwd`;
 
 rm *.tgz
 
+VERSION=`node -e "console.log(require('../clean-latest/grid-community-modules/core/package.json').version)"`
+node setAgDeps.js $VERSION
+
 cd $SOURCE_FOLDER
 
 function packModule() {
