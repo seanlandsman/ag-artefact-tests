@@ -3,7 +3,7 @@ const gridProjectRoots = ['modules', 'packages'];
 const chartProjectRoots = ['charts'];
 
 const literal = false;
-let gridVersion = process.argv.length === 3 ? process.argv[2] : "31.0.0";
+let gridVersion = process.argv.length === 3 ? require(`${process.argv[2]}/grid-community-modules/core/package.json`).version : "31.0.0";
 const chartVersion = "latest";
 
 const patchDeps = (deps, version) => {
