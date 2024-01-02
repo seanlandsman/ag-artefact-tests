@@ -2,14 +2,22 @@ describe('Grid Tests', () => {
     [
         {name: 'Modules: Angular Community', path: 'modules/angular-community/dist/my-app/', license: false},
         {name: 'Modules: Angular Enterprise', path: 'modules/angular-enterprise/dist/my-app/', license: true},
-        {name: 'Modules: React Community', path: 'modules/react-community/build/', license: false},
-        {name: 'Modules: React Enterprise', path: 'modules/react-enterprise/build/', license: true},
-        {name: 'Modules: Webpack Community', path: 'modules/webpack-ts-community/dist/', license: false},
-        {name: 'Modules: Webpack Enterprise', path: 'modules/webpack-ts-enterprise/dist/', license: true},
+        {name: 'Modules: Angular Nx Jest Community', path: 'modules/angular-nx-jest-community/dist/angular-nx-jest/', license: false},
+        {name: 'Modules: Angular Nx Jest Enterprise', path: 'modules/angular-nx-jest-enterprise/dist/angular-nx-jest/', license: true},
         {name: 'Modules: ESM Community', path: 'modules/esm/modulesCommunity.html', license: false},
         {name: 'Modules: ESM Enterprise', path: 'modules/esm/modulesEnterprise.html', license: true},
-        {name: 'Modules: Vitest Community', path: 'modules/vitest-community/dist', license: false},
-        {name: 'Modules: Vitest Enterprise', path: 'modules/vitest-enterprise/dist', license: true},
+        {name: 'Modules: Webpack TS Community', path: 'modules/webpack-ts-community/dist/', license: false},
+        {name: 'Modules: Webpack TS Enterprise', path: 'modules/webpack-ts-enterprise/dist/', license: true},
+        {name: 'Modules: React Community', path: 'modules/react-community/build/', license: false},
+        {name: 'Modules: React Enterprise', path: 'modules/react-enterprise/build/', license: true},
+        {name: 'Modules: React Community Vitest', path: 'modules/react-vitest-community/dist', license: false},
+        {name: 'Modules: React Enterprise Vitest', path: 'modules/react-vitest-enterprise/dist', license: true},
+        {name: 'Modules: Vue 2 Community', path: 'modules/vue2-community/dist', license: false},
+        {name: 'Modules: Vue 2 Enterprise', path: 'modules/vue2-enterprise/dist', license: true},
+        {name: 'Modules: Vue 3 Community', path: 'modules/vue3-community/dist', license: false},
+        {name: 'Modules: Vue 3 Community', path: 'modules/vue3-enterprise/dist', license: true},
+        {name: 'Modules: Vue 3 Community Script/Setup', path: 'modules/vue3-community-scriptsetup/dist', license: false},
+
         {name: 'Packages: Vanilla Community', path: 'packages/vanilla/community.html', license: false},
         {name: 'Packages: Vanilla Enterprise', path: 'packages/vanilla/enterprise.html', license: true},
         {name: 'Packages: Angular Community', path: 'packages/angular-community/dist/my-app/', license: false},
@@ -29,14 +37,14 @@ describe('Grid Tests', () => {
         {name: 'Packages: Next Community', path: 'packages/next-community/.next/server/pages', license: false},
         {name: 'Packages: Next Enterprise', path: 'packages/next-enterprise/.next/server/pages', license: true},
         {name: 'Packages: Vue 2 Community', path: 'packages/vue2-community/dist', license: false},
-        {name: 'Packages: Webpack Community Favour Main', path: 'packages/webpack-ts-favour-main-community/dist', license: false},
-        {name: 'Packages: Webpack Enterprise Favour Main', path: 'packages/webpack-ts-favour-main-enterprise/dist', license: true},
         {name: 'Packages: Vitest Community', path: 'packages/vitest-community/dist', license: false},
         {name: 'Packages: Vitest Enterprise', path: 'packages/vitest-enterprise/dist', license: true},
+        {name: 'Packages: Webpack Community Favour Main', path: 'packages/webpack-ts-favour-main-community/dist', license: false},
+        {name: 'Packages: Webpack Enterprise Favour Main', path: 'packages/webpack-ts-favour-main-enterprise/dist', license: true},
         ].forEach(({name, path, license}) => {
         it(`license message ${license ? 'printed' : 'not shown'} ${name}`, () => {
             cy.visit(`http://127.0.0.1:8085/${path}`, {
-                onBeforeLoad(win: any) {
+                onBeforeLoad(win: any) {[]
                     cy.spy(win.console, 'error').as('spyWinConsoleError');
                 },
             })

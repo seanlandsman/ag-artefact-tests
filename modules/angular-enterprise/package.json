@@ -22,12 +22,12 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0",
-    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-31.0.0.tgz",
-    "@ag-grid-community/core": "../../ag-grid-community-core-31.0.0.tgz",
-    "@ag-grid-community/angular": "../../ag-grid-community-angular-31.0.0.tgz",
-    "@ag-grid-community/styles": "../../ag-grid-community-styles-31.0.0.tgz",
-    "@ag-grid-enterprise/core": "../../ag-grid-enterprise-core-31.0.0.tgz",
-    "@ag-grid-enterprise/status-bar": "../../ag-grid-enterprise-status-bar-31.0.0.tgz"
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-31.0.1.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-31.0.1.tgz",
+    "@ag-grid-community/angular": "../../ag-grid-community-angular-31.0.1.tgz",
+    "@ag-grid-community/styles": "../../ag-grid-community-styles-31.0.1.tgz",
+    "@ag-grid-enterprise/core": "../../ag-grid-enterprise-core-31.0.1.tgz",
+    "@ag-grid-enterprise/status-bar": "../../ag-grid-enterprise-status-bar-31.0.1.tgz"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.5",

@@ -2,7 +2,6 @@
   "packages": [
     "modules/*",
     "packages/*",
-    "esm/*",
     "charts/*"
   ],
   "command": {

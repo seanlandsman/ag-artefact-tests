@@ -38,9 +38,9 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-31.0.0.tgz",
-    "@ag-grid-community/core": "../../ag-grid-community-core-31.0.0.tgz",
-    "@ag-grid-community/react": "../../ag-grid-community-react-31.0.0.tgz"
+    "@ag-grid-community/client-side-row-model": "../../ag-grid-community-client-side-row-model-31.0.1.tgz",
+    "@ag-grid-community/core": "../../ag-grid-community-core-31.0.1.tgz",
+    "@ag-grid-community/react": "../../ag-grid-community-react-31.0.1.tgz"
   },
   "jest": {
     "transform": {

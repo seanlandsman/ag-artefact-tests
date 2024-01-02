@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "jsx": "react",
+    "rootDir": "src/main/frontend",
+    "incremental": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2016"
+    ],
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/main/frontend/**/*"
+  ]
+}

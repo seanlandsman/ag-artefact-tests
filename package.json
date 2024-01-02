@@ -7,8 +7,10 @@
     "clean": "npx lerna run clean",
     "start-server": "nohup http-server -p 8085 . > http.log 2>&1 & echo $! > pid",
     "build": "lerna run build --parallel",
+    "bootstrap": "lerna bootstrap --no-ci --registry http://54.194.75.252:4873",
     "test:individual-projects": "npx lerna run test",
     "test:cypress": "cypress run --reporter list",
+    "test:grid": "cypress run --reporter list --spec 'cypress/e2e/grids.cy.ts'",
     "test:charts": "cypress run --reporter list --spec 'cypress/e2e/charts.cy.ts'",
     "test": "npm run test:cypress && npm run test:individual-projects",
     "stop-server": "kill -9 `cat pid` 2> /dev/null"
