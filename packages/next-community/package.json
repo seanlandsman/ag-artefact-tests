@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "clean": "rimraf .next",
+    "clean": "rimraf .angular dist lib .cache .next",
     "build": "npm run clean && next build && sed -i -e 's /_next/ /.next/ g' ./.next/server/pages/index.html",
     "start": "next start",
     "lint": "next lint"

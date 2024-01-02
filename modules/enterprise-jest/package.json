@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html",
+    "clean": "rimraf .angular dist lib .cache .next",
     "build": "parcel build index.html",
     "test": "jest"
   },

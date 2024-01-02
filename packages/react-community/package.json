@@ -15,7 +15,7 @@
     "rimraf": "5.0.1"
   },
   "scripts": {
-    "clean": "rimraf build",
+    "clean": "rimraf .angular dist lib .cache .next",
     "start": "HOST= npm run clean && react-scripts start",
     "build": "npm run clean &&react-scripts build",
     "testx": "react-scripts test",

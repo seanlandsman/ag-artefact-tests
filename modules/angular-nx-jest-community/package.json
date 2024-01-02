@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "clean": "rimraf .angular dist lib .cache .next",
     "build": "nx build --base-href=/modules/angular-nx-jest-community/dist/angular-nx-jest/",
     "test": "nx test"
   },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AgGridReact } from 'ag-grid-react';
-import { ColDef } from '@ag-grid-community';
+import { ColDef } from 'ag-grid-community';
 
 import 'ag-grid-community/styles/ag-grid.min.css';
 import 'ag-grid-community/styles/ag-theme-balham.min.css';

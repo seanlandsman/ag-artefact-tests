@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "clean": "rimraf .angular dist",
+    "clean": "rimraf .angular dist lib .cache .next",
     "start": "npm run clean && ng serve",
     "build": "npm run clean && ng build --base-href=/charts/angular-community/dist/my-app/",
     "watch": "ng build --watch --configuration development",

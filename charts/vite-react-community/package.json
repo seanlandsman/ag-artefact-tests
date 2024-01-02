@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "clean": "rimraf .angular dist lib .cache .next",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "testx": "vitest run"

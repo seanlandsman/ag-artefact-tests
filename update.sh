@@ -36,7 +36,7 @@ packModules "grid-community-modules" "${GRID_COMMUNITY_MODULES[@]}"
 GRID_ENTERPRISE_MODULES=("core" "status-bar" "master-detail" "excel-export" "filter-tool-panel" "master-detail" "menu" "multi-filter" "range-selection" "rich-select" "row-grouping" "row-grouping" "side-bar" "set-filter" "charts")
 packModules "grid-enterprise-modules" "${GRID_ENTERPRISE_MODULES[@]}"
 
-GRID_PACKAGES=("ag-grid-community" "ag-grid-enterprise" "ag-grid-react" "ag-grid-angular/dist/ag-grid-angular" "ag-grid-vue")
+GRID_PACKAGES=("ag-grid-community" "ag-grid-enterprise" "ag-grid-react" "ag-grid-angular/dist/ag-grid-angular" "ag-grid-vue" "ag-grid-vue3")
 packModules "grid-packages" "${GRID_PACKAGES[@]}"
 
 cd $CWD

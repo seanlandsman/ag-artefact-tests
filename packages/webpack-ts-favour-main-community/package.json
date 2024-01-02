@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf .angular dist lib .cache .next",
     "start": "npm run clean && webpack-dev-server --progress --port 8080 --mode development",
     "build": "npm run clean && webpack --mode production"
   },
