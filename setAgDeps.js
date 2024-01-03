@@ -8,7 +8,9 @@ const chartVersion = "latest";
 
 const patchDeps = (deps, version) => {
     Object.keys(deps).forEach(dependencyName => {
-        if (dependencyName.startsWith("@ag-") || dependencyName.startsWith("ag-")) {
+        if(dependencyName.startsWith("ag-charts")) {
+            deps[dependencyName] = chartVersion;
+        } else if (dependencyName.startsWith("@ag-") || dependencyName.startsWith("ag-")) {
             const zippedFilename = dependencyName.replaceAll("/", "-").replaceAll("@", "")
             deps[dependencyName] = literal ? version : `../../${zippedFilename}-${version}.tgz`
         }
@@ -18,7 +20,6 @@ const patchDeps = (deps, version) => {
 const patchChartsDeps = (deps, version) => {
     Object.keys(deps).forEach(dependencyName => {
         if (dependencyName.startsWith("@ag-") || dependencyName.startsWith("ag-")) {
-            const zippedFilename = dependencyName.replaceAll("/", "-").replaceAll("@", "")
             deps[dependencyName] = version;
         }
     })

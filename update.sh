@@ -46,7 +46,7 @@ do
   for subDirectory in ./$directory/*;
   do
 	  cd "$subDirectory/node_modules" > /dev/null
-	  rm -rf ag-charts-community ag-charts-enterprise @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise > /dev/null
+	  rm -rf ag-charts-community ag-charts-enterprise ag-charts-angular ag-charts-react ag-charts-vue ag-charts-vue3 @ag-grid-community @ag-grid-enterprise ag-grid-community ag-grid-enterprise > /dev/null
 	  cd - > /dev/null
 	done
 done

@@ -1,10 +1,10 @@
 import {Grid, GridOptions, ModuleRegistry} from "@ag-grid-community/core";
 import {ClientSideRowModelModule} from "@ag-grid-community/client-side-row-model";
 import {StatusBarModule} from "@ag-grid-enterprise/status-bar";
+import {GridChartsModule} from "@ag-grid-enterprise/charts";
 import './styles.scss';
 
-ModuleRegistry.register(ClientSideRowModelModule);
-ModuleRegistry.register(StatusBarModule);
+ModuleRegistry.registerModules([ClientSideRowModelModule,StatusBarModule,GridChartsModule]);
 
 class SimpleGrid {
     private gridOptions: GridOptions = <GridOptions>{};

@@ -4,11 +4,11 @@ import {AgGridReact} from '@ag-grid-community/react';
 import {ModuleRegistry} from '@ag-grid-community/core';
 import {ClientSideRowModelModule} from "@ag-grid-community/client-side-row-model";
 import {StatusBarModule} from "@ag-grid-enterprise/status-bar";
+import {GridChartsModule} from "@ag-grid-enterprise/charts";
 import '@ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
 import '@ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
 
-ModuleRegistry.register(ClientSideRowModelModule);
-ModuleRegistry.register(StatusBarModule);
+ModuleRegistry.registerModules([ClientSideRowModelModule,StatusBarModule,GridChartsModule]);
 
 const App = () => {
     const [rowData] = useState([
